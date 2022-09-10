@@ -1,6 +1,9 @@
 package com.example.beans;
 
-public class Vehicle {
+import org.springframework.stereotype.Component;
+
+@Component
+public class  Vehicle {
 
     private String name;
 
@@ -10,5 +13,9 @@ public class Vehicle {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void hello(){
+        System.out.print("Hello from vehicle class");
     }
 }
