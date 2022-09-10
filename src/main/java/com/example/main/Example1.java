@@ -50,5 +50,6 @@ public class Example1 {
         Vehicle vehicle = context.getBean(Vehicle.class);
         System.out.println("Component Vehicle name from spring context is "+vehicle.getName());
         vehicle.hello();
+        context.close();
     }
 }

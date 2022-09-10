@@ -3,6 +3,7 @@ package com.example.beans;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 @Component
 public class  Vehicle {
@@ -20,7 +21,12 @@ public class  Vehicle {
     public void initialize(){
         this.name="Jeep";
     }
+
+    @PreDestroy
+    public void destroy(){
+        System.out.println("Destrying bean");
+    }
     public void hello(){
-        System.out.print("Hello from vehicle class");
+        System.out.println("Hello from vehicle class");
     }
 }
