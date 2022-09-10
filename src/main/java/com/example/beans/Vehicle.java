@@ -2,6 +2,8 @@ package com.example.beans;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+
 @Component
 public class  Vehicle {
 
@@ -14,7 +16,10 @@ public class  Vehicle {
     public void setName(String name) {
         this.name = name;
     }
-
+    @PostConstruct
+    public void initialize(){
+        this.name="Jeep";
+    }
     public void hello(){
         System.out.print("Hello from vehicle class");
     }
