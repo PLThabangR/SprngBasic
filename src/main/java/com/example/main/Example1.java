@@ -27,6 +27,10 @@ public class Example1 {
         //Creating application context for each scenario vechile
         Vehicle veh1 = context.getBean("havalMotors",Vehicle.class);
         System.out.println("Vehicle name from Spring Context is: " + veh1.getName());
+        //When you multple bean of the same return type
+        Vehicle veh2 = context.getBean(Vehicle.class);
+        System.out.println("Primary vehicle name from Sprin context" + veh2.getName());
+
 
         /*
         We don’t need to do any explicit casting while fetching a bean from context.
